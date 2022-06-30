@@ -12,6 +12,44 @@ author: John Doe
 language: zh
 timezone: ''
 
+######## Sidebar ########
+sidebar:
+  logo:
+    avatar: '[config.avatar](/about/)' # you can set avatar link in _config.site.yml or '[https://xxx.png](/about/)'
+    title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  menu:
+    post:  '[btn.blog](/)'
+    wiki:  '[btn.wiki](/wiki/)'
+    notes: '[btn.notes](/notes/)'
+    more: '[btn.more](/about/)'
+  # Sidebar widgets
+  widget_layout:
+    index: [ welcome, recent, poetry ] # for home/wiki/categories/tags/archives/404 pages
+    page: [ welcome, toc ] # for pages using 'layout:page'
+    post: [ toc, repo_info ] # for pages using 'layout:post'
+    wiki: [ toc, repo_info, wiki_more ] # for pages using 'layout:wiki'
+  widgets:
+    # default layout in home/wiki/categories/tags/archives pages
+    default_layout: [welcome, recent] # [welcome, recent]
+    # Recent update
+    recent:
+      layout: recent
+      rss: # /atom.xml # npm i hexo-generator-feed
+      limit: 3 # Count of posts
+    # TOC (valid only in layout:post/wiki)
+    toc:
+      layout: toc
+      list_number: false
+      min_depth: 2
+      max_depth: 5
+      fallback: recent # Use a backup widget when toc does not exist.
+    welcome:
+      layout: markdown
+      title: 🪧 公告
+      content: |
+   这里是内容xxxxxxx
+   
+、
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://7o7.top
