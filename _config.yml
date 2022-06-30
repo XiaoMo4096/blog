@@ -47,8 +47,7 @@ sidebar:
       layout: markdown
       title: 🪧 公告
       content: |
-   这里是内容xxxxxxx
-   
+      poetry: true
 、
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
